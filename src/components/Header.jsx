@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const Header = () => {
   return (
@@ -14,7 +14,7 @@ const NavContent = () =>(
 
     <div>
       <a href="#home">Home</a>
-      <a href="#word">Word</a>
+      <a href="#work">Work</a>
       <a href="#experience">Experience</a>
       <a href="#services">Services</a>
       <a href="#testimonial">Testimonial</a>
