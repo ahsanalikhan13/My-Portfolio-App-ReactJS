@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useRef } from 'react';
 import {animate, motion} from 'framer-motion';
 import Typewriter from 'typewriter-effect';
@@ -23,6 +24,13 @@ const Home = () => {
     })
   }
 
+=======
+import React from 'react';
+import {motion} from 'framer-motion';
+
+const Home = () => {
+
+>>>>>>> 6aaf2e3 (resolve conflicts)
     const animations={
         h1:{
             initial: {
@@ -32,6 +40,7 @@ const Home = () => {
                 whileInView:{
                     x: 0,
                     opacity: 1,
+<<<<<<< HEAD
                 }          
         },
 
@@ -47,11 +56,18 @@ const Home = () => {
         }
     }
 
+=======
+                }
+            
+        }
+    }
+>>>>>>> 6aaf2e3 (resolve conflicts)
   return (
     <div id='home'>
       <section>
         <div>
             <motion.h1 initial {...animations.h1}>
+<<<<<<< HEAD
 
                 Hi, I am <br/> AHSAN ALI KHAN
 
@@ -110,3 +126,13 @@ const Home = () => {
   )
 }
 export default Home;
+=======
+                Hi, I am <br/> AHSAN ALI KHAN
+            </motion.h1>
+        </div>
+      </section>
+    </div>
+  )
+}
+export default Home
+>>>>>>> 6aaf2e3 (resolve conflicts)

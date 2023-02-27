@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+import React from 'react'
+>>>>>>> 6aaf2e3 (resolve conflicts)
 
 const Header = () => {
   return (
@@ -14,7 +18,11 @@ const NavContent = () =>(
 
     <div>
       <a href="#home">Home</a>
+<<<<<<< HEAD
       <a href="#work">Work</a>
+=======
+      <a href="#word">Word</a>
+>>>>>>> 6aaf2e3 (resolve conflicts)
       <a href="#experience">Experience</a>
       <a href="#services">Services</a>
       <a href="#testimonial">Testimonial</a>
