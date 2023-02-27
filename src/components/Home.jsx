@@ -1,7 +1,27 @@
-import React from 'react';
-import {motion} from 'framer-motion';
+import React, { useRef } from 'react';
+import {animate, motion} from 'framer-motion';
+import Typewriter from 'typewriter-effect';
+import {BsArrowUpRight, BsChevronDown} from 'react-icons/bs';
+import ahsan from '../assets/img1.png';
+
 
 const Home = () => {
+
+  const clientCount=useRef(null);
+  const animationClientsCount = () =>{
+    animate(0,100, {
+      duration:1,
+      onUpdate: (v) => (clientCount.current.textContent=v.toFixed())
+    })
+  }
+
+  const projectCount= useRef(null)
+  const animationProjectsCount = () =>{
+    animate(0, 500, {
+      duration: 1,
+      onUpdate: (p) => (projectCount.current.textContent=p.toFixed())
+    })
+  }
 
     const animations={
         h1:{
@@ -23,6 +43,48 @@ const Home = () => {
             <motion.h1 initial {...animations.h1}>
                 Hi, I am <br/> AHSAN ALI KHAN
             </motion.h1>
+
+            <Typewriter
+            options={{
+              strings: ["A React Developer", "JavaScript Developer", "Scrum Master"],
+              autoStart: true,
+              loop: true,
+              cursor: null,
+              wrapperClassName:"typewriterpara",
+            }}
+            />
+
+            <div>
+            <a href="mailto:aahsanalikhan.13@gmail.com">Hire Me!</a>
+            <a href="#work">Projects! <BsArrowUpRight/></a>
+            </div>
+            
+            <article>
+
+              <p>
+                +<motion.span whileInView={animationClientsCount} ref={clientCount}></motion.span>
+              </p>
+
+              <span>Clients WorldWide!</span>
+            </article>
+
+            <aside>
+            <article>
+
+              <p>
+                +<motion.span whileInView={animationProjectsCount} ref={projectCount}></motion.span>
+              </p>
+
+              <span>Projects Accomplished!</span>
+            </article>
+
+            <article data-special>
+
+              <p>Contact</p>
+              <span>aahsanalikhan.13@gmail.com</span>
+
+            </article>
+            </aside>
         </div>
       </section>
     </div>
