@@ -46,7 +46,10 @@ const Services = () => {
 
         <motion.div className='serviceBox3' 
             whileInView={animations.whileInView} 
-            initial={animations.twoAndThree}>
+            initial={animations.twoAndThree}
+              transition={{
+                delay: 0.3
+              }}>
             <AiFillAndroid/>
             <span>App Development</span>
         </motion.div>

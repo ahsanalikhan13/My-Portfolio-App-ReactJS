@@ -59,7 +59,7 @@ const Home = () => {
             
             <Typewriter
             options={{
-              strings: ["Frontend Developer", "JavaScript Developer", "ReactJS"],
+              strings: ["Frontend Developer", "JavaScript, ReactJS"],
               autoStart: true,
               loop: true,
               cursor: null,
