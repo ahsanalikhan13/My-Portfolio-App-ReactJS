@@ -16,7 +16,7 @@ const Work = () => {
             showThumbs={false}
             infiniteLoop={true}
             interval={1500}
-            autoPlay={true}     
+            autoPlay={true}
             >
                 
                 {data.projects.map(i => (
