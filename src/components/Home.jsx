@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import {animate, motion} from 'framer-motion';
 import Typewriter from 'typewriter-effect';
-import {BsArrowUpRight, BsChevronDown} from 'react-icons/bs';
+import {BsArrowUpRight, BsChevronDown, BsFillHandIndexThumbFill} from 'react-icons/bs';
 import ahsan from '../assets/img1.png';
 
 
@@ -11,7 +11,7 @@ const Home = () => {
   const animationClientsCount = () =>{
     animate(0,100, {
       duration:1,
-      onUpdate: (v) => (clientCount.current.textContent=v.toFixed())
+      onUpdate: (c) => (clientCount.current.textContent=c.toFixed())
     })
   }
 
