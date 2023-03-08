@@ -3,3 +3,9 @@
         transform: translate(-50%, -30%);
     }
 }
+
+@keyframes upupdowndown{
+    to{
+        transform: translateY(-10px);
+    }
+}

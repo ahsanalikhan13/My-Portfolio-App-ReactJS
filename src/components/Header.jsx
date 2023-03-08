@@ -1,5 +1,5 @@
 import React from 'react';
-// import {useNavigate} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -11,10 +11,12 @@ const Header = () => {
 
 const NavContent = () =>{
 
-  // const navigate= useNavigate();
-  // const goToContact=()=>{
-  //   navigate('/contact');
-  // }
+  const navigate=useNavigate();
+
+  const navrto=()=>{
+    navigate('contact',{replace:true});
+  }
+
 
   return(
   <>
@@ -26,7 +28,7 @@ const NavContent = () =>{
       <a href="#timeline">Timeline</a>
       <a href="#services">Services</a>
       <a href="#testimonial">Testimonial</a>
-      <a href="#contact">Contact</a>
+      <a onClick={navrto} >Contact</a>
       {/* <a onClick={()=> goToContact()}>Contact</a> */}
 
       <div>
