@@ -6,6 +6,7 @@ import Timeline from "../components/Timeline";
 import Work from "../components/Work";
 import Testimonial from "../components/Testimonial";
 import { Toaster } from "react-hot-toast";
+import Footer from '../components/Footer';
 
 
 
@@ -18,6 +19,7 @@ function MainScreen() {
     <Services/>
     <Testimonial/>
     <Toaster/>
+    <Footer/>
     </>
     )
   }

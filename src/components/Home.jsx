@@ -46,7 +46,6 @@ const Home = () => {
         }
     }
 
-
   return (
      <div id='home'>
       <section>

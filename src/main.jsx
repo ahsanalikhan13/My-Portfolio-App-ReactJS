@@ -6,10 +6,10 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from './App';
 import Contact from "./components/Contact";
 import Header from "./components/Header";
+import { Toaster } from "react-hot-toast";
 import './styles/app.scss';
 
 const router = createBrowserRouter([
-    <Header/>,
   {
     path: "/",
     element: <App/>,
@@ -22,7 +22,7 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-
+    <Toaster/>
     <RouterProvider router={router} />
 
   </React.StrictMode>,

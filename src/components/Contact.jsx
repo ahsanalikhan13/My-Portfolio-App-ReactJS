@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import helloImg from '../assets/img2.jpg';
 import toast from 'react-hot-toast';
-import Header from './Header';
+import { motion } from 'framer-motion';
+import {addDoc, collection} from 'firebase/firestore';
+import { db } from '../firebase';
 
 const Contact = () => {
 
@@ -10,16 +12,26 @@ const Contact = () => {
   const [msg, setMsg] =useState("");
 
 
-  const submitHandler=(e)=>{
+  const submitHandler= async(e)=>{
     e.preventDefault();
-    console.log(name, email, msg)
-    toast.success('Data saved successfully!')
+
+    try {
+      await addDoc (collection (db, "contacts"), {name, email, msg})
+
+      toast.success("Data saved successfully!");
+
+    } catch (error) {
+      toast.error("Error");
+      console.log("error!")
+    }
+
+   
   }
 
   return (
     <div id='contact'>
       <section>
-        <form onSubmit={submitHandler}>
+        <motion.form onSubmit={submitHandler}>
           <h2>Contact Me!</h2>
 
           <input 
@@ -41,8 +53,8 @@ const Contact = () => {
           onChange={(e)=>setMsg(e.target.value)}  
           placeholder='Your message!' rows={12} cols={33}  />
 
-          <button type='submit'>Submit</button>
-        </form>
+          <motion.button type='submit'>Submit</motion.button>
+        </motion.form>
       </section>
 
       <aside>
