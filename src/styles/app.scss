@@ -11,6 +11,7 @@
 @import 'testimonial';
 @import 'contact';
 @import 'footer';
+@import 'mediaquery';
 
 
 *{
@@ -31,6 +32,7 @@ body{
 }
 
 .disableBtn{
-    background-color: rgb(237, 237, 237);
-    cursor: not-allowed;
+    color: $color6;
+    background-color: rgb(237, 237, 237) !important;
+    cursor: not-allowed !important;
 }

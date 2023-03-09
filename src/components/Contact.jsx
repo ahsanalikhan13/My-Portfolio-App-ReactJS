@@ -4,31 +4,41 @@ import toast from 'react-hot-toast';
 import { motion } from 'framer-motion';
 import {addDoc, collection} from 'firebase/firestore';
 import { db } from '../firebase';
+import Footer from '../components/Footer';
+import Header from '../components/Header';
 
 const Contact = () => {
 
   const [name, setName] =useState("");
   const [email, setEmail] =useState("");
   const [msg, setMsg] =useState("");
+  const [disableBtn, setDisableBtn]= useState (false);
 
 
   const submitHandler= async(e)=>{
     e.preventDefault();
+    setDisableBtn(true);
 
     try {
       await addDoc (collection (db, "contacts"), {name, email, msg})
 
+      setName("");
+      setEmail("");
+      setMsg("");
+
       toast.success("Data saved successfully!");
+      setDisableBtn(false);
 
     } catch (error) {
       toast.error("Error");
       console.log("error!")
-    }
-
-   
+      setDisableBtn(false);
+    } 
   }
 
   return (
+    <>
+    <div><Header/></div>
     <div id='contact'>
       <section>
         <motion.form onSubmit={submitHandler}>
@@ -53,7 +63,10 @@ const Contact = () => {
           onChange={(e)=>setMsg(e.target.value)}  
           placeholder='Your message!' rows={12} cols={33}  />
 
-          <motion.button type='submit'>Submit</motion.button>
+          <motion.button
+          disabled={disableBtn}
+          className={disableBtn ? "disableBtn" : ''}
+          type='submit'>Submit</motion.button>
         </motion.form>
       </section>
 
@@ -61,6 +74,8 @@ const Contact = () => {
         <img src={helloImg} alt="hello" />
       </aside>
     </div>
+    <div><Footer/></div>
+    </>
   )
 }
 
