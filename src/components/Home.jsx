@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useRef } from 'react';
 import {animate, motion} from 'framer-motion';
 import Typewriter from 'typewriter-effect';
@@ -23,6 +24,13 @@ const Home = () => {
     })
   }
 
+=======
+import React from 'react';
+import {motion} from 'framer-motion';
+
+const Home = () => {
+
+>>>>>>> 6aaf2e3 (resolve conflicts)
     const animations={
         h1:{
             initial: {
@@ -32,6 +40,10 @@ const Home = () => {
                 whileInView:{
                     x: 0,
                     opacity: 1,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 69036f8 (resolve conflicts)
                 }          
         },
 

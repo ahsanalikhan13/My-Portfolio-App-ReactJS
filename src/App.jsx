@@ -3,8 +3,11 @@ import Header from './components/Header';
 import Home from './components/Home';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 37a831e (first commit)
+=======
+>>>>>>> 69036f8 (resolve conflicts)
 import Timeline from "./components/Timeline";
 import Work from "./components/Work";
 // import Footer from './components/Footer';
@@ -25,6 +28,7 @@ function App() {
   <Header/>
   <Home/>
 >>>>>>> 6aaf2e3 (resolve conflicts)
+<<<<<<< HEAD
 =======
 
 function App() {
@@ -35,6 +39,8 @@ function App() {
     <Timeline/>
     {/* <Footer/> */}
 >>>>>>> 37a831e (first commit)
+=======
+>>>>>>> 69036f8 (resolve conflicts)
   </>
 }
 
